@@ -52,3 +52,31 @@ $.each(items, function(i){
             .appendTo($trunk)
     }
 })
+
+//year 4
+function makeTable($container, data){
+    let $table = $("<table></table>").addClass('table')
+    $.each(data, function(rowInd, i) {
+        let $row = $("<tr/>")
+        $.each(i, function(colInd, c) {
+            $row.append($("<t" + (rowInd == 0 ? "h" : "d") + "/>").text(c))
+        })
+        $table.append($row)
+    })
+    $container.append($table)
+    return 
+}
+
+let data = [
+            ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], //days
+            ["Arthimancy", "Muggle Studies", "Arthimancy", "Free", "Muggle Studies"],
+            ["Care of Magical Creatures", "Free", "Care of Magical Creatures", "Free", "Free"],
+            ["Herbology", "Potions", "Herbology", "Potions", "Free"],
+            ["Lunch", "Lunch", "Lunch", "Lunch", "Lunch"],
+            ["History of Magic", "Charms", "History of Magic", "Charms", "DADA"],
+            ["Ancient Runes", "Divination", "Ancient Runes", "Free", "DADA"],
+            ["Transfiguration", "Divination", "Transfiguration", "Free", "Free"],
+            ["Past Curfew", "Past Curfew", "Past Curfew", "Astronomy", "Past Curfew"],]
+
+let classSchedule = makeTable($container, data)
+

@@ -6,3 +6,20 @@ body {
 .cat {
     font-family: fantasy;
 }
+
+table, th, td {
+    border: grey solid 1px;
+}
+
+table { 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+   list-style-type: none;
+   border: 1px rgb(66, 36, 19) solid;
+   width: 50%;
+   margin-left: 20%;
+   
+}
