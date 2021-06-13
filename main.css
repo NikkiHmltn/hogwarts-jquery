@@ -1,3 +1,8 @@
 body {
     background-color: #2a623d;
+    text-align: center;
+}
+
+.cat {
+    font-family: fantasy;
 }
